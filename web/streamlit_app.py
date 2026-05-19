@@ -1,9 +1,14 @@
 import requests
 import streamlit as st
 
+# ==========================================
+# 极其重要：set_page_config 必须是第一个调用的 st 命令！
+# ==========================================
+st.set_page_config(page_title="企业知识库 AI Agent", page_icon="🤖", layout="wide")
+
+# 配置完页面后，再渲染侧边栏等组件
 API_BASE_URL = st.sidebar.text_input("后端地址", value="http://127.0.0.1:8000")
 
-st.set_page_config(page_title="企业知识库 AI Agent", page_icon="🤖", layout="wide")
 st.title("企业知识库 AI Agent 问答系统")
 st.caption("FastAPI + Streamlit + RAG + OpenAI-compatible LLM")
 
