@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+*.pyc
+.env
+storage/*.json
+storage/*.jsonl
+data/uploads/*
+!data/uploads/.gitkeep
+.DS_Store
+.idea/
