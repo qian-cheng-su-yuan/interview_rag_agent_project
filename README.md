@@ -121,3 +121,21 @@ python run_web.py
 ```
 
 浏览器打开 Streamlit 页面后，可以上传文档并开始问答。
+
+
+## 5. 项目流程
+用户
+ ↓
+Streamlit 前端
+ ↓
+FastAPI 后端接口
+ ↓
+RAGService 核心流程
+ ↓
+文档读取 → 文本切分 → 本地索引 → 相似度检索
+ ↓
+Prompt 组装
+ ↓
+大模型 API
+ ↓
+回答 + 参考片段 + 日志
